@@ -14,7 +14,12 @@ import { Signup } from './signup/signup';
 import { AppComponent } from './app.component';
 
 import { routes } from './app.routes';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {
+  MdButtonModule, MdCardModule, MdIconModule, MdInputModule, MdTabsModule,
+  MdToolbarModule
+} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 export function getAuthHttp(http) {
@@ -40,7 +45,9 @@ declarations: [
     HttpModule, BrowserModule, FormsModule,
     RouterModule.forRoot(routes, {
       useHash: true
-    }), NgbModule.forRoot()
+    }), NgbModule.forRoot(),
+    MdCardModule, MdTabsModule, MdToolbarModule, MdIconModule, MdInputModule, MdButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AuthGuard,

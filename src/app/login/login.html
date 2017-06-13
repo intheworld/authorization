@@ -1,15 +1,19 @@
+
 <div class="login jumbotron center-blockn container-fluid">
   <h1>Login</h1>
   <form role="form" (submit)="login($event, username.value, password.value)">
     <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" #username class="form-control" id="username" placeholder="Username">
+      <md-input-container class="example-full-width">
+        <input mdInput id="username" #username placeholder="Username">
+      </md-input-container>
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" #password class="form-control" id="password" placeholder="Password">
+      <md-input-container class="example-full-width">
+        <input mdInput id="password" #password placeholder="Password">
+      </md-input-container>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-    <a [routerLink]="['/signup']">Click here to Signup</a>
-  </form>
-</div>
+
+    <button md-raised-button>Submit</button>
+      <a md-button [routerLink]="['/signup']">Click here to Signup</a>
+    </form>
+  </div>

@@ -9,7 +9,7 @@ const template = require('./home.html');
 
 @Component({
   selector: 'home',
-  template: template,
+  templateUrl: './home.html',
   styles: [ styles ]
 })
 

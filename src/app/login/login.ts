@@ -8,7 +8,7 @@ const template = require('./login.html')
 
 @Component({
   selector: 'login',
-  template: template,
+  templateUrl: './login.html',
   styles: [ styles ]
 })
 
